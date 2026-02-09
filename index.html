@@ -51,6 +51,7 @@
             font-weight: 900;
             letter-spacing: -0.05em;
             color: #e5e7eb;
+            line-height: 1;
         }
 
         h1 {
@@ -71,10 +72,10 @@
         }
 
         .mockup-mobile {
-            width: 220px;
-            height: 440px;
+            width: 200px;
+            height: 400px;
             background: #ffffff;
-            border-radius: 32px;
+            border-radius: 24px;
             border: 4px solid #e5e7eb;
             position: relative;
             overflow: hidden;
@@ -134,7 +135,7 @@
     </style>
 </head>
 
-<body class="p-8 md:p-24 max-w-6xl mx-auto selection:bg-black selection:text-white">
+<body class="p-8 md:p-20 max-w-5xl mx-auto selection:bg-black selection:text-white">
 
     <!-- Fixed Buttons -->
     <div class="fixed bottom-10 right-10 z-50 flex flex-col gap-3 no-print fixed-buttons">
@@ -159,7 +160,7 @@
 
     <!-- Header -->
     <header
-        class="mb-32 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 pb-12 border-b border-slate-100">
+        class="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 pb-8 border-b border-slate-200">
         <div>
             <div class="text-[10px] font-bold text-slate-400 mb-6 uppercase tracking-[0.2em]">Project Report 2026</div>
             <h1 class="text-7xl md:text-8xl font-black text-slate-900 mb-4">LAYER<br>STUDIOS</h1>
@@ -179,20 +180,20 @@
         </div>
     </header>
 
-    <main class="space-y-40">
+    <main class="space-y-32">
 
         <!-- 01 개요 -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24">
-            <div class="md:col-span-3">
-                <span class="section-number text-6xl block mb-4">01</span>
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+            <div class="md:col-span-3 sticky top-10">
+                <span class="section-number text-6xl block mb-2">01</span>
                 <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Executive Summary</h2>
             </div>
-            <div class="md:col-span-9">
+            <div class="md:col-span-9 border-t border-slate-100 pt-8 mt-5">
                 <p class="text-3xl md:text-5xl font-light leading-tight text-slate-900 keep-all">
                     <span class="font-bold">12개 지점</span>의 분산된 데이터를<br>
                     실시간으로 하나로 잇다.
                 </p>
-                <div class="mt-12 text-lg text-slate-500 leading-relaxed max-w-3xl keep-all">
+                <div class="mt-8 text-lg text-slate-500 leading-relaxed max-w-3xl keep-all">
                     Layer Studios의 운영 효율을 극대화하기 위해 <strong
                         class="text-slate-900 border-b border-slate-300 pb-0.5">Google Antigravity</strong> 기술을 도입했습니다.
                     데이터 수집부터 배포까지 전 과정을 자동화하여, 완전한 디지털 운영 환경을 구축했습니다.
@@ -201,61 +202,59 @@
         </section>
 
         <!-- 02 매커니즘 -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24">
-            <div class="md:col-span-3">
-                <span class="section-number text-6xl block mb-4">02</span>
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+            <div class="md:col-span-3 sticky top-10">
+                <span class="section-number text-6xl block mb-2">02</span>
                 <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Mechanism</h2>
             </div>
-            <div class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-16">
-                <div class="group">
-                    <h3 class="font-bold text-xl text-slate-900 mb-4">Collection</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed keep-all">AI 에이전트가 12개 지점 현황판에 동시 접속하여 데이터를 수집, 확인
-                        시간을 90% 단축했습니다.</p>
-                </div>
-                <div class="group">
-                    <h3 class="font-bold text-xl text-slate-900 mb-4">Processing</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed keep-all">비정형 텍스트(지점, 파트, 시간)를 분석하여 표준화된 JSON 데이터로
-                        구조화합니다.</p>
-                </div>
-                <div class="group">
-                    <h3 class="font-bold text-xl text-slate-900 mb-4">Visualization</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed keep-all">'마스터 캘린더'를 통해 전 지점 인력 현황을 직관적으로 파악할 수 있도록
-                        시각화합니다.</p>
+            <div class="md:col-span-9 border-t border-slate-100 pt-8 mt-5">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="group">
+                        <h3 class="font-bold text-xl text-slate-900 mb-4">Collection</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">AI 에이전트가 12개 지점 현황판에 동시 접속하여 데이터를 수집,
+                            확인 시간을 90% 단축했습니다.</p>
+                    </div>
+                    <div class="group">
+                        <h3 class="font-bold text-xl text-slate-900 mb-4">Processing</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">비정형 텍스트(지점, 파트, 시간)를 분석하여 표준화된 JSON
+                            데이터로 구조화합니다.</p>
+                    </div>
+                    <div class="group">
+                        <h3 class="font-bold text-xl text-slate-900 mb-4">Visualization</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">'마스터 캘린더'를 통해 전 지점 인력 현황을 직관적으로 파악할 수
+                            있도록 시각화합니다.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- 03 비주얼 -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24">
-            <div class="md:col-span-3">
-                <span class="section-number text-6xl block mb-4">03</span>
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+            <div class="md:col-span-3 sticky top-10">
+                <span class="section-number text-6xl block mb-2">03</span>
                 <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Visuals</h2>
             </div>
-            <div class="md:col-span-9">
-                <div class="bg-slate-50 rounded-2xl p-12 md:p-20">
-                    <div class="flex flex-col xl:flex-row items-center justify-center gap-16">
+            <div class="md:col-span-9 border-t border-slate-100 pt-8 mt-5">
+                <div class="bg-slate-50 rounded-sm p-12 md:p-16">
+                    <div class="flex flex-col md:flex-row items-end justify-center gap-8 md:gap-12">
                         <!-- PC -->
-                        <div class="w-full max-w-2xl">
-                            <div
-                                class="text-[10px] font-bold tracking-widest text-slate-400 mb-4 uppercase text-center xl:text-left">
+                        <div class="w-full max-w-xl">
+                            <div class="text-[10px] font-bold tracking-widest text-slate-400 mb-4 uppercase text-left">
                                 Desktop View</div>
-                            <div class="mockup-pc shadow-2xl shadow-slate-200">
+                            <div class="mockup-pc shadow-xl shadow-slate-200/50">
                                 <div class="aspect-video bg-slate-100 overflow-hidden relative group">
                                     <img src="https://github.com/jaimejobeat-max/infotest/blob/main/pc.png?raw=true"
                                         alt="PC Capture" class="photo-area">
                                 </div>
                             </div>
-                            <p
-                                class="text-[10px] text-center mt-6 text-slate-400 font-bold tracking-widest uppercase no-print">
-                                Hover to Colorize</p>
                         </div>
 
                         <!-- Mobile -->
-                        <div class="relative">
+                        <div class="relative shrink-0">
                             <div
                                 class="text-[10px] font-bold tracking-widest text-slate-400 mb-4 uppercase text-center">
-                                Mobile View</div>
-                            <div class="mockup-mobile mx-auto shadow-2xl shadow-slate-200">
+                                Mobile</div>
+                            <div class="mockup-mobile mx-auto shadow-xl shadow-slate-200/50">
                                 <div class="w-full h-full bg-slate-100">
                                     <img src="https://github.com/jaimejobeat-max/infotest/blob/main/phone.png?raw=true"
                                         alt="Mobile Capture" class="photo-area">
@@ -263,27 +262,29 @@
                             </div>
                         </div>
                     </div>
+                    <p class="text-[10px] text-center mt-8 text-slate-400 font-bold tracking-widest uppercase no-print">
+                        Hover images to Colorize</p>
                 </div>
             </div>
         </section>
 
         <!-- 04 기대효과 -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24">
-            <div class="md:col-span-3">
-                <span class="section-number text-6xl block mb-4">04</span>
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+            <div class="md:col-span-3 sticky top-10">
+                <span class="section-number text-6xl block mb-2">04</span>
                 <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Impact</h2>
             </div>
-            <div class="md:col-span-9">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div class="bg-white border-t-2 border-slate-900 pt-8">
+            <div class="md:col-span-9 border-t border-slate-100 pt-8 mt-5">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                    <div class="pt-4">
                         <div class="text-6xl font-black text-slate-900 mb-2 tracking-tighter">1s</div>
                         <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Check Time</div>
                     </div>
-                    <div class="bg-white border-t-2 border-slate-900 pt-8">
+                    <div class="pt-4">
                         <div class="text-6xl font-black text-slate-900 mb-2 tracking-tighter">120h</div>
                         <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Saved / Year</div>
                     </div>
-                    <div class="bg-white border-t-2 border-slate-900 pt-8">
+                    <div class="pt-4">
                         <div class="text-6xl font-black text-slate-900 mb-2 tracking-tighter">0%</div>
                         <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Human Error</div>
                     </div>
@@ -292,23 +293,25 @@
         </section>
 
         <!-- 05 향후계획 -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 pb-32 border-b border-slate-100">
-            <div class="md:col-span-3">
-                <span class="section-number text-6xl block mb-4">05</span>
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start pb-32 border-b border-slate-200">
+            <div class="md:col-span-3 sticky top-10">
+                <span class="section-number text-6xl block mb-2">05</span>
                 <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Next Step</h2>
             </div>
-            <div class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="border-l-4 border-slate-100 pl-8 py-2">
-                    <h3 class="font-bold text-lg text-slate-900 mb-3">주간 근무 통계</h3>
+            <div
+                class="md:col-span-9 border-t border-slate-100 pt-8 mt-5 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">주간 근무 통계</h3>
                     <p class="text-sm text-slate-500 leading-relaxed keep-all">요일별 업무 강도를 자동 분석하여 최적의 인력 배치를 제안합니다.</p>
                 </div>
-                <div class="border-l-4 border-slate-100 pl-8 py-2">
-                    <h3 class="font-bold text-lg text-slate-900 mb-3">지각 및 근태 분석</h3>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">지각 및 근태 분석
+                    </h3>
                     <p class="text-sm text-slate-500 leading-relaxed keep-all">로그 데이터를 교차 분석하여 정확하고 투명한 근태 관리를 실현합니다.
                     </p>
                 </div>
-                <div class="border-l-4 border-slate-100 pl-8 py-2">
-                    <h3 class="font-bold text-lg text-slate-900 mb-3">급여 연동</h3>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">급여 연동</h3>
                     <p class="text-sm text-slate-500 leading-relaxed keep-all">텍스트 로그를 수치 데이터로 변환, 정산 시스템과 자동 연동합니다.</p>
                 </div>
             </div>
@@ -321,7 +324,7 @@
         <div>© 2026 Layer Studios. All rights reserved.</div>
         <div class="flex gap-8">
             <span>Confidential Report</span>
-            <span class="text-slate-900">v1.8.0 Release</span>
+            <span class="text-slate-900">v1.9.0 Release</span>
         </div>
     </footer>
 
