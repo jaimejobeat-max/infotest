@@ -63,6 +63,10 @@
             letter-spacing: -0.03em;
         }
 
+        h3 {
+            letter-spacing: -0.02em;
+        }
+
         /* Ultra Minimal Mockups */
         .mockup-pc {
             border-radius: 4px;
@@ -180,62 +184,95 @@
         </div>
     </header>
 
-    <main class="space-y-32">
+    <main class="space-y-40">
 
-        <!-- 01 개요 -->
+        <!-- 01 Executive Summary -->
         <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
             <div class="md:col-span-3 sticky top-10">
                 <span class="section-number text-6xl block mb-2">01</span>
                 <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Executive Summary</h2>
             </div>
             <div class="md:col-span-9 border-t border-slate-100 pt-8 mt-5">
-                <p class="text-3xl md:text-5xl font-light leading-tight text-slate-900 keep-all">
-                    <span class="font-bold">12개 지점</span>의 분산된 데이터를<br>
-                    실시간으로 하나로 잇다.
+                <p class="text-2xl md:text-3xl font-light leading-relaxed text-slate-900 keep-all">
+                    본 프로젝트는 LAYER STUDIOS의 12개 지점에 분산된 스케줄 정보를 통합하여 <span class="font-bold">운영 효율을 극대화</span>하는 것을 목적으로
+                    합니다.
                 </p>
-                <div class="mt-8 text-lg text-slate-500 leading-relaxed max-w-3xl keep-all">
-                    Layer Studios의 운영 효율을 극대화하기 위해 <strong
-                        class="text-slate-900 border-b border-slate-300 pb-0.5">Google Antigravity</strong> 기술을 도입했습니다.
-                    데이터 수집부터 배포까지 전 과정을 자동화하여, 완전한 디지털 운영 환경을 구축했습니다.
+                <div class="mt-8 text-base text-slate-500 leading-relaxed max-w-3xl keep-all">
+                    최신 AI 기술인 <strong class="text-slate-900 font-bold">Google Antigravity</strong>를 활용하여 저비용·고효율의 전용
+                    대시보드를 구축하였으며, 이를 통해 관리 시간을 획기적으로 단축하고 데이터 기반의 인력 운영 기틀을 마련하였습니다.
                 </div>
             </div>
         </section>
 
-        <!-- 02 매커니즘 -->
+        <!-- 02 Current Challenges -->
         <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
             <div class="md:col-span-3 sticky top-10">
                 <span class="section-number text-6xl block mb-2">02</span>
-                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Mechanism</h2>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Challenges</h2>
             </div>
             <div class="md:col-span-9 border-t border-slate-100 pt-8 mt-5">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div class="group">
-                        <h3 class="font-bold text-xl text-slate-900 mb-4">Collection</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed keep-all">AI 에이전트가 12개 지점 현황판에 동시 접속하여 데이터를 수집,
-                            확인 시간을 90% 단축했습니다.</p>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">정보의 파편화
+                        </h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">12개 지점이 개별 게시판을 사용함에 따라 전체 인력 동선 파악이
+                            어려움.</p>
                     </div>
-                    <div class="group">
-                        <h3 class="font-bold text-xl text-slate-900 mb-4">Processing</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed keep-all">비정형 텍스트(지점, 파트, 시간)를 분석하여 표준화된 JSON
-                            데이터로 구조화합니다.</p>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">수동 업무의
+                            과부하</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">관리자가 매일 각 사이트를 순회 및 확인하는 데 일평균 20분
+                            이상의 고정 시간 소요.</p>
                     </div>
-                    <div class="group">
-                        <h3 class="font-bold text-xl text-slate-900 mb-4">Visualization</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed keep-all">'마스터 캘린더'를 통해 전 지점 인력 현황을 직관적으로 파악할 수
-                            있도록 시각화합니다.</p>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">실시간 대응 한계
+                        </h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">모바일 환경에서 게시판 접근이 번거로워 현장 직원의 실시간 스케줄
+                            확인 및 대응 지연.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 03 비주얼 -->
+        <!-- 03 Technical Mechanism -->
         <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
             <div class="md:col-span-3 sticky top-10">
                 <span class="section-number text-6xl block mb-2">03</span>
-                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Visuals</h2>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Mechanism</h2>
             </div>
             <div class="md:col-span-9 border-t border-slate-100 pt-8 mt-5">
-                <div class="bg-slate-50 rounded-sm p-12 md:p-16">
+                <p class="text-sm text-slate-400 mb-8 font-medium">단순한 웹페이지를 넘어, AI가 데이터를 스스로 처리하는 3단계 자동화 파이프라인</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="group">
+                        <div class="text-xs font-bold text-slate-400 mb-2">Step 1. The Eyes</div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-4">자동 데이터 수집</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">AI 에이전트가 12개 지점 게시판에 동시 접속하여 데이터를
+                            크롤링(Scraping), 확인 속도를 90% 이상 개선했습니다.</p>
+                    </div>
+                    <div class="group">
+                        <div class="text-xs font-bold text-slate-400 mb-2">Step 2. The Brain</div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-4">비정형 데이터 구조화</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">단순 텍스트 제목에서 [지점명], [파트], [시간] 정보를
+                            정교하게 추출하여 분석 가능한 데이터로 변환합니다.</p>
+                    </div>
+                    <div class="group">
+                        <div class="text-xs font-bold text-slate-400 mb-2">Step 3. The Face</div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-4">통합 시각화 대시보드</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">정제된 데이터를 '마스터 캘린더'에 지점별 고유 색상으로 배치,
+                            클릭 한 번으로 전 지점 현황을 파악합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 PWA Experience -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+            <div class="md:col-span-3 sticky top-10">
+                <span class="section-number text-6xl block mb-2">04</span>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">PWA Experience</h2>
+            </div>
+            <div class="md:col-span-9 border-t border-slate-100 pt-8 mt-5">
+                <div class="bg-slate-50 rounded-sm p-12 md:p-16 mb-12">
                     <div class="flex flex-col md:flex-row items-end justify-center gap-8 md:gap-12">
                         <!-- PC -->
                         <div class="w-full max-w-xl">
@@ -248,7 +285,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Mobile -->
                         <div class="relative shrink-0">
                             <div
@@ -262,57 +298,83 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-[10px] text-center mt-8 text-slate-400 font-bold tracking-widest uppercase no-print">
-                        Hover images to Colorize</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">브랜드 아이덴티티</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">홈 화면에 'LAYER STUDIOS' 전용 아이콘을 생성하여
+                            브랜드 몰입감을 제공합니다.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">사용자 경험 (UX)</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">브라우저 주소창이 없는 'Full-Screen' 모드로 실제 앱과
+                            동일한 자연스러운 사용성을 구현했습니다.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">현장 접근성</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">현장 스태프가 이동 중에도 터치 한 번으로 본인의 스케줄을 즉시
+                            확인할 수 있습니다.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 04 기대효과 -->
+        <!-- 05 Business Impact -->
         <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
             <div class="md:col-span-3 sticky top-10">
-                <span class="section-number text-6xl block mb-2">04</span>
+                <span class="section-number text-6xl block mb-2">05</span>
                 <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Impact</h2>
             </div>
             <div class="md:col-span-9 pt-5">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                     <div class="border-t border-slate-900 pt-4">
                         <div class="text-6xl font-black text-slate-900 mb-2 tracking-tighter">1s</div>
-                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Check Time</div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Check Time</div>
+                        <p class="text-xs text-slate-500 keep-all">기존 15~20분 (지점별 순회) 소요되던 과정을 즉시 확인 가능하도록 단축</p>
                     </div>
                     <div class="border-t border-slate-900 pt-4">
                         <div class="text-6xl font-black text-slate-900 mb-2 tracking-tighter">120h</div>
-                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Saved / Year</div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Saved / Year</div>
+                        <p class="text-xs text-slate-500 keep-all">단순 반복 업무 시간 절감으로 데이터 기반 기획 업무에 집중 가능</p>
                     </div>
                     <div class="border-t border-slate-900 pt-4">
                         <div class="text-6xl font-black text-slate-900 mb-2 tracking-tighter">0%</div>
-                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Human Error</div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Human Error</div>
+                        <p class="text-xs text-slate-500 keep-all">수동 대조에 따른 누락 가능성을 자동 취합 프로세스로 원천 차단</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 05 향후계획 -->
+        <!-- 06 Conclusion -->
         <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start pb-32 border-b border-slate-200">
             <div class="md:col-span-3 sticky top-10">
-                <span class="section-number text-6xl block mb-2">05</span>
+                <span class="section-number text-6xl block mb-2">06</span>
                 <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900">Next Step</h2>
             </div>
-            <div
-                class="md:col-span-9 border-t border-slate-100 pt-8 mt-5 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                <div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">주간 근무 통계</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed keep-all">요일별 업무 강도를 자동 분석하여 최적의 인력 배치를 제안합니다.</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">지각 및 근태 분석
-                    </h3>
-                    <p class="text-sm text-slate-500 leading-relaxed keep-all">로그 데이터를 교차 분석하여 정확하고 투명한 근태 관리를 실현합니다.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">급여 연동</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed keep-all">텍스트 로그를 수치 데이터로 변환, 정산 시스템과 자동 연동합니다.</p>
+            <div class="md:col-span-9 border-t border-slate-100 pt-8 mt-5">
+                <p class="text-lg font-light leading-relaxed text-slate-900 keep-all mb-12">
+                    본 시스템 구축을 통해 LAYER STUDIOS는 단순 반복 업무를 자동화하고 <span class="font-bold">디지털 운영 자산을 확보</span>했습니다.
+                    향후 다음과 같은 기능을 추가하여 인적 자원 관리(HR)를 위한 인포그래픽 인사이트를 제공할 예정입니다.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">근무 시간 통계
+                        </h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">요일별/지점별 근무 데이터를 분석하여 운영 최적화</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">지각률 분석
+                        </h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">객관적 지표를 통한 HR 관리 및 근태 문화 개선</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3 block border-b border-slate-100 pb-2">인포그래픽
+                            인사이트</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed keep-all">데이터를 한눈에 파악할 수 있는 시각적 리포트 제공</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -324,7 +386,7 @@
         <div>© 2026 Layer Studios. All rights reserved.</div>
         <div class="flex gap-8">
             <span>Confidential Report</span>
-            <span class="text-slate-900">v1.9.0 Release</span>
+            <span class="text-slate-900">v2.0.0 Release</span>
         </div>
     </footer>
 
