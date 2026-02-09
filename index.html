@@ -13,8 +13,7 @@
 
     <title>LAYER STUDIOS System Infographic</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <script>
         tailwind.config = {
@@ -22,16 +21,19 @@
                 extend: {
                     fontFamily: {
                         sans: ['Noto Sans KR', 'sans-serif'],
-                        serif: ['Noto Serif KR', 'serif'],
                     },
                     colors: {
-                        report: {
-                            bg: '#f3f4f6',
-                            paper: '#ffffff',
-                            line: '#e5e7eb',
-                            text: '#1f2937',
-                            muted: '#6b7280',
-                            accent: '#2563eb'
+                        slate: {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827',
                         }
                     }
                 }
@@ -40,57 +42,57 @@
     </script>
     <style>
         body {
-            background-color: #f3f4f6;
-            color: #1f2937;
-        }
-
-        .report-shadow {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            background-color: #ffffff;
+            color: #111827;
         }
 
         /* Typography */
-        h1,
-        h2,
-        h3 {
-            font-family: 'Noto Sans KR', sans-serif;
-            letter-spacing: -0.025em;
+        .section-number {
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
-        p {
-            letter-spacing: -0.01em;
-            line-height: 1.6;
+        /* Ultra Minimal Mockups */
+        .mockup-pc {
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .mockup-mobile {
+            width: 220px;
+            height: 440px;
+            background: #ffffff;
+            border-radius: 32px;
+            border: 4px solid #e5e7eb;
+            position: relative;
+            overflow: hidden;
         }
 
         /* Interactive Images */
-        .interactive-img-container {
-            overflow: hidden;
-            position: relative;
-            cursor: zoom-in;
-        }
-
-        .interactive-img {
-            transition: transform 0.5s ease;
+        .photo-area {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
             display: block;
         }
 
-        .interactive-img-container:hover .interactive-img {
+        /* Zoom Effect on Hover */
+        .mockup-pc:hover .photo-area,
+        .mockup-mobile:hover .photo-area {
             transform: scale(1.05);
-            /* Slight zoom on hover */
+            /* Smooth zoom */
+            cursor: zoom-in;
         }
 
         /* Print Optimization */
         @media print {
             body {
                 background: white;
+                color: black;
                 padding: 0;
-            }
-
-            .report-container {
-                box-shadow: none;
-                margin: 0;
-                max-width: 100%;
-                border: none;
             }
 
             .no-print,
@@ -101,260 +103,206 @@
             section {
                 break-inside: avoid;
                 page-break-inside: avoid;
-                border-bottom: 1px solid #eee !important;
+                border: none !important;
+            }
+
+            .mockup-pc,
+            .mockup-mobile {
+                border-color: #ddd;
             }
         }
     </style>
 </head>
 
-<body class="py-10 px-4 md:px-0 selection:bg-gray-900 selection:text-white">
+<body class="p-6 md:p-16 max-w-5xl mx-auto selection:bg-black selection:text-white">
 
     <!-- Fixed Buttons -->
     <div class="fixed bottom-8 right-8 z-50 flex flex-col gap-3 no-print fixed-buttons">
         <button onclick="window.print()"
-            class="bg-white border border-gray-200 text-gray-900 px-5 py-3 rounded-md shadow-lg font-medium text-xs hover:bg-gray-50 transition-all flex items-center gap-2 group">
-            <svg class="w-4 h-4 text-gray-400 group-hover:text-gray-900" fill="none" stroke="currentColor"
+            class="bg-white border border-slate-200 text-slate-900 px-5 py-3 rounded-full shadow-sm font-medium text-xs hover:bg-slate-50 transition-all flex items-center gap-2 group">
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-slate-900" fill="none" stroke="currentColor"
                 viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
             </svg>
-            <span class="tracking-tight">PDF Export</span>
+            <span class="tracking-tight">PDF 저장</span>
         </button>
         <button onclick="copyLink()" id="copyBtn"
-            class="bg-gray-900 text-white px-5 py-3 rounded-md shadow-lg font-medium text-xs hover:bg-gray-800 transition-all flex items-center gap-2">
+            class="bg-slate-900 text-white px-5 py-3 rounded-full shadow-lg font-medium text-xs hover:bg-slate-800 transition-all flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
-            <span class="tracking-tight">Copy Link</span>
+            <span class="tracking-tight">링크 복사</span>
         </button>
     </div>
 
-    <!-- Main Report Container -->
-    <main class="report-container max-w-4xl mx-auto bg-white min-h-screen report-shadow md:border md:border-gray-200">
-
-        <!-- Header Section -->
-        <header class="p-12 md:p-16 border-b border-gray-200 bg-gray-50">
-            <div class="flex justify-between items-start mb-12">
-                <div class="text-xs font-bold tracking-widest text-gray-400 uppercase">System Integration Report</div>
-                <div class="text-[10px] font-mono text-gray-400">DOC ID: 2026-LS-01</div>
-            </div>
-
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-                LAYER STUDIOS<br>
-                <span class="font-serif font-light text-gray-600">Integrated Schedule System</span>
+    <!-- Header -->
+    <header
+        class="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 pb-8 border-b border-slate-100">
+        <div>
+            <div class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest">Project Report 2026</div>
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-slate-900 leading-none mb-2">LAYER<br>STUDIOS
             </h1>
+            <p class="text-xl text-slate-500 font-light tracking-tight">통합 스케줄 관리 시스템 구축 보고서</p>
+        </div>
+        <div class="flex flex-col items-start md:items-end">
+            <div class="text-[10px] font-bold tracking-widest text-slate-400 mb-1 uppercase">Live Access</div>
+            <a href="https://schedule-nu-taupe.vercel.app/" target="_blank"
+                class="group flex items-center gap-2 text-sm font-medium text-slate-900 border-b border-slate-200 hover:border-slate-900 transition-all pb-0.5">
+                schedule-nu-taupe.vercel.app
+                <svg class="w-3 h-3 text-slate-400 group-hover:text-slate-900 transition-colors" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+            </a>
+        </div>
+    </header>
 
-            <div class="flex flex-col md:flex-row justify-between items-end gap-6 mt-8">
-                <div class="space-y-1">
-                    <p class="text-xs uppercase tracking-widest text-gray-400 font-bold">Project Goal</p>
-                    <p class="text-base text-gray-800 font-medium">12개 지점 통합 스케줄 데이터 파이프라인 구축</p>
-                </div>
-                <div class="text-right">
-                    <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Live Access</p>
-                    <a href="https://schedule-nu-taupe.vercel.app/" target="_blank"
-                        class="text-sm font-mono text-blue-600 hover:text-blue-800 underline decoration-blue-200 underline-offset-4">
-                        schedule-nu-taupe.vercel.app
-                    </a>
+    <main class="space-y-32">
+
+        <!-- 01 개요 -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div class="md:col-span-3">
+                <span class="section-number text-3xl text-slate-200">01</span>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-slate-900 mt-2">Executive Summary</h2>
+            </div>
+            <div class="md:col-span-9">
+                <p class="text-2xl md:text-3xl font-light leading-snug text-slate-800 keep-all">
+                    <span class="font-semibold text-slate-900">12개 지점</span>의 분산된 스케줄 데이터를 실시간으로 통합하여 하나의 대시보드로 시각화했습니다.
+                </p>
+                <div class="mt-8 text-base text-slate-500 leading-relaxed max-w-2xl keep-all">
+                    <strong class="text-slate-900">Google Antigravity</strong> 기술을 활용하여 데이터 수집부터 배포까지 전 과정을 자동화함으로써,
+                    Layer Studios만의 디지털 운영 환경을 구축했습니다.
                 </div>
             </div>
-        </header>
+        </section>
 
-        <div class="p-12 md:p-16 space-y-16">
-
-            <!-- 01 Executive Summary -->
-            <section class="border-l-2 border-slate-900 pl-8 py-2">
-                <div class="flex items-baseline gap-4 mb-4">
-                    <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">01 / Summary</span>
+        <!-- 02 매커니즘 -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div class="md:col-span-3">
+                <span class="section-number text-3xl text-slate-200">02</span>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-slate-900 mt-2">Mechanism</h2>
+            </div>
+            <div class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="group">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Collection</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed keep-all">AI 에이전트가 12개 지점 현황판에 동시 접속하여 데이터를 수집, 확인
+                        시간을 90% 단축했습니다.</p>
                 </div>
-                <h2 class="text-2xl font-bold text-gray-900 mb-6 font-serif">Executive Summary</h2>
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                    <div class="md:col-span-8">
-                        <p class="text-lg text-gray-700 leading-relaxed text-justify break-keep">
-                            본 리포트는 Layer Studios의 12개 지점에 분산된 아날로그적 스케줄 관리 방식을
-                            <strong class="font-semibold text-gray-900 border-b-2 border-yellow-200">Google Antigravity
-                                AI 기술</strong>을 통해
-                            완전 자동화된 디지털 환경으로 전환한 성과를 다룹니다.
-                            실시간 데이터 동기화를 통해 관리 효율성을 극대화하고 인적 오류를 원천 차단했습니다.
-                        </p>
-                    </div>
+                <div class="group">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Processing</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed keep-all">비정형 텍스트(지점, 파트, 시간)를 분석하여 표준화된 JSON 데이터로
+                        구조화합니다.</p>
                 </div>
-            </section>
-
-            <!-- Divider -->
-            <hr class="border-gray-100">
-
-            <!-- 02 Mechanism -->
-            <section>
-                <div class="flex items-baseline gap-4 mb-8">
-                    <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">02 / Architecture</span>
+                <div class="group">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Visualization</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed keep-all">'마스터 캘린더'를 통해 전 지점 인력 현황을 직관적으로 파악할 수 있도록
+                        시각화합니다.</p>
                 </div>
-                <h2 class="text-2xl font-bold text-gray-900 mb-8 font-serif">System Mechanism</h2>
+            </div>
+        </section>
 
-                <div
-                    class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 border border-gray-200 bg-white">
-                    <div class="p-8 group hover:bg-gray-50 transition-colors">
-                        <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Step 1</div>
-                        <h3 class="font-bold text-lg text-gray-900 mb-3">Collection</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed break-keep">
-                            지점별 게시판에 AI 에이전트가 5분 단위로 접속하여 변경 사항을 실시간 감지 및 수집합니다.
-                        </p>
-                    </div>
-                    <div class="p-8 group hover:bg-gray-50 transition-colors">
-                        <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Step 2</div>
-                        <h3 class="font-bold text-lg text-gray-900 mb-3">Processing</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed break-keep">
-                            비정형 텍스트(지점/시간/내용)를 LLM이 분석하여 표준화된 JSON 데이터 스키마로 변환합니다.
-                        </p>
-                    </div>
-                    <div class="p-8 group hover:bg-gray-50 transition-colors">
-                        <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Step 3</div>
-                        <h3 class="font-bold text-lg text-gray-900 mb-3">Visualization</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed break-keep">
-                            Next.js 기반의 마스터 캘린더 대시보드에 즉시 반영하여 전 지점 현황을 시각화합니다.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 03 Visuals -->
-            <section class="bg-gray-50 -mx-12 md:-mx-16 p-12 md:p-16 border-y border-gray-200">
-                <div class="max-w-4xl mx-auto">
-                    <div class="flex items-baseline gap-4 mb-8">
-                        <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">03 / Interface</span>
-                    </div>
-                    <h2 class="text-2xl font-bold text-gray-900 mb-10 font-serif">User Experience</h2>
-
-                    <div class="flex flex-col gap-12">
-                        <!-- Desktop -->
-                        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                            <div class="md:col-span-4 order-2 md:order-1">
-                                <h3 class="text-lg font-bold text-gray-900 mb-2">Desktop Dashboard</h3>
-                                <p class="text-sm text-gray-600 leading-relaxed">
-                                    관리자 전용 대시보드는 넓은 화면을 활용하여 12개 지점의 스케줄을 히트맵 형태로 한눈에 조망할 수 있습니다.
-                                </p>
-                                <p class="text-xs text-blue-600 mt-2 font-bold uppercase tracking-wide">Hover to Zoom
-                                </p>
-                            </div>
-                            <div class="md:col-span-8 order-1 md:order-2">
-                                <div
-                                    class="bg-white p-1 border border-gray-200 shadow-sm rounded interactive-img-container">
+        <!-- 03 비주얼 -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div class="md:col-span-3">
+                <span class="section-number text-3xl text-slate-200">03</span>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-slate-900 mt-2">Visuals</h2>
+            </div>
+            <div class="md:col-span-9">
+                <div class="bg-slate-50 rounded-lg p-8 md:p-12">
+                    <div class="flex flex-col xl:flex-row items-center justify-center gap-12">
+                        <!-- PC -->
+                        <div class="w-full max-w-2xl">
+                            <div
+                                class="text-[10px] font-bold tracking-widest text-slate-400 mb-3 uppercase text-center xl:text-left">
+                                Desktop View</div>
+                            <div class="mockup-pc">
+                                <div class="aspect-video bg-slate-100 overflow-hidden relative group">
                                     <img src="https://github.com/jaimejobeat-max/infotest/blob/main/pc.png?raw=true"
-                                        alt="PC View" class="w-full h-auto block interactive-img">
+                                        alt="PC Capture" class="photo-area">
                                 </div>
                             </div>
+                            <p class="text-[10px] text-center mt-2 text-slate-400 font-medium no-print">이미지를 올려 상세 내용을
+                                확인하세요</p>
                         </div>
 
                         <!-- Mobile -->
-                        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                            <div class="md:col-span-8 flex justify-center md:justify-end">
-                                <div
-                                    class="bg-white p-2 border border-gray-200 shadow-sm rounded-[2rem] w-[240px] interactive-img-container">
-                                    <div class="rounded-[1.5rem] overflow-hidden border border-gray-100">
-                                        <img src="https://github.com/jaimejobeat-max/infotest/blob/main/phone.png?raw=true"
-                                            alt="Mobile View" class="w-full h-auto block interactive-img">
-                                    </div>
+                        <div class="relative">
+                            <div
+                                class="text-[10px] font-bold tracking-widest text-slate-400 mb-3 uppercase text-center">
+                                Mobile</div>
+                            <div class="mockup-mobile mx-auto">
+                                <div class="w-full h-full bg-slate-100">
+                                    <img src="https://github.com/jaimejobeat-max/infotest/blob/main/phone.png?raw=true"
+                                        alt="Mobile Capture" class="photo-area">
                                 </div>
                             </div>
-                            <div class="md:col-span-4">
-                                <h3 class="text-lg font-bold text-gray-900 mb-2">Mobile PWA</h3>
-                                <p class="text-sm text-gray-600 leading-relaxed">
-                                    현장 매니저를 위한 모바일 뷰는 PWA로 구축되어 앱과 동일한 사용성을 제공하며, 스크롤 없는 직관적인 UX를 지향합니다.
-                                </p>
-                                <p class="text-xs text-blue-600 mt-2 font-bold uppercase tracking-wide">Hover to Zoom
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- 04 Impact -->
-            <section>
-                <div class="flex items-baseline gap-4 mb-8">
-                    <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">04 / Performance</span>
-                </div>
-                <h2 class="text-2xl font-bold text-gray-900 mb-8 font-serif">Quantitative Analysis</h2>
-
-                <div class="space-y-6">
-                    <div class="flex items-center justify-between border-b border-gray-100 pb-4">
-                        <div class="w-1/2">
-                            <p class="text-sm font-bold text-gray-500 uppercase tracking-widest">Processing Time</p>
-                            <p class="text-xs text-gray-400 mt-1">데이터 확인 소요 시간</p>
-                        </div>
-                        <div class="w-1/2 text-right">
-                            <span class="text-3xl font-mono font-bold text-gray-900">1.2s</span>
-                            <span class="text-sm text-green-600 font-medium ml-2">▼ 99%</span>
-                        </div>
+        <!-- 04 기대효과 -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div class="md:col-span-3">
+                <span class="section-number text-3xl text-slate-200">04</span>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-slate-900 mt-2">Impact</h2>
+            </div>
+            <div class="md:col-span-9">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-100 border border-slate-100 rounded-lg overflow-hidden">
+                    <div class="bg-white p-10 text-center hover:bg-slate-50 transition-colors">
+                        <div class="text-5xl font-bold text-slate-900 mb-2 tracking-tighter">1s</div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Check Time</div>
                     </div>
-                    <div class="flex items-center justify-between border-b border-gray-100 pb-4">
-                        <div class="w-1/2">
-                            <p class="text-sm font-bold text-gray-500 uppercase tracking-widest">Resource Saving</p>
-                            <p class="text-xs text-gray-400 mt-1">연간 단순 반복 업무 절감</p>
-                        </div>
-                        <div class="w-1/2 text-right">
-                            <span class="text-3xl font-mono font-bold text-gray-900">120h+</span>
-                            <span class="text-sm text-green-600 font-medium ml-2">Estimated</span>
-                        </div>
+                    <div class="bg-white p-10 text-center hover:bg-slate-50 transition-colors">
+                        <div class="text-5xl font-bold text-slate-900 mb-2 tracking-tighter">120h</div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Saved / Year</div>
                     </div>
-                    <div class="flex items-center justify-between border-b border-gray-100 pb-4">
-                        <div class="w-1/2">
-                            <p class="text-sm font-bold text-gray-500 uppercase tracking-widest">Data Integrity</p>
-                            <p class="text-xs text-gray-400 mt-1">인적 오류 발생률</p>
-                        </div>
-                        <div class="w-1/2 text-right">
-                            <span class="text-3xl font-mono font-bold text-gray-900">0%</span>
-                            <span class="text-sm text-blue-600 font-medium ml-2">Automated</span>
-                        </div>
+                    <div class="bg-white p-10 text-center hover:bg-slate-50 transition-colors">
+                        <div class="text-5xl font-bold text-slate-900 mb-2 tracking-tighter">0%</div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Human Error</div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- 05 Next Steps -->
-            <section class="border-t border-gray-200 pt-16">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div>
-                        <h2 class="text-xl font-bold text-gray-900 mb-4 font-serif">Future Roadmap</h2>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                            현재 구축된 데이터 파이프라인을 기반으로 인사이트 분석 및 자동 정산 시스템으로 고도화를 진행합니다.
-                        </p>
-                        <ul class="space-y-3 text-sm text-gray-700">
-                            <li class="flex items-center gap-3">
-                                <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
-                                <strong>주간 근무 통계:</strong> 요일별 업무 강도 히트맵 분석
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
-                                <strong>지각/근태 패턴:</strong> 로그 교차 검증을 통한 이상 징후 감지
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
-                                <strong>자동 정산:</strong> 근무 시간 데이터 급여 시스템 연동
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bg-gray-900 text-white p-8 rounded-sm flex flex-col justify-between">
-                        <div>
-                            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Contact</p>
-                            <p class="text-lg font-serif">Digital Transformation Team</p>
-                            <p class="text-sm text-gray-400 mt-2">support@layerstudios.com</p>
-                        </div>
-                        <div class="text-right mt-8">
-                            <p class="text-2xl font-bold">Layer Studios</p>
-                        </div>
-                    </div>
+        <!-- 05 향후계획 -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 pb-20 border-b border-slate-100">
+            <div class="md:col-span-3">
+                <span class="section-number text-3xl text-slate-200">05</span>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-slate-900 mt-2">Next Step</h2>
+            </div>
+            <div class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border-l border-slate-200 pl-6 py-1">
+                    <h3 class="font-bold text-base text-slate-900 mb-2">주간 근무 통계</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed keep-all">요일별 업무 강도를 자동 분석하여 최적의 인력 배치를 제안합니다.</p>
                 </div>
-            </section>
+                <div class="border-l border-slate-200 pl-6 py-1">
+                    <h3 class="font-bold text-base text-slate-900 mb-2">지각 및 근태 분석</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed keep-all">로그 데이터를 교차 분석하여 정확하고 투명한 근태 관리를 실현합니다.
+                    </p>
+                </div>
+                <div class="border-l border-slate-200 pl-6 py-1">
+                    <h3 class="font-bold text-base text-slate-900 mb-2">급여 연동</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed keep-all">텍스트 로그를 수치 데이터로 변환, 정산 시스템과 자동 연동합니다.</p>
+                </div>
+            </div>
+        </section>
 
-        </div>
-
-        <!-- Footer -->
-        <footer
-            class="bg-gray-50 border-t border-gray-200 p-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-            <p>© 2026 Layer Studios. Confidential Report.</p>
-            <p class="font-mono">Generated by Google Antigravity</p>
-        </footer>
     </main>
+
+    <footer
+        class="mt-20 flex flex-col md:flex-row justify-between items-center text-xs font-medium text-slate-400 uppercase tracking-widest gap-4">
+        <div>© 2026 Layer Studios. All rights reserved.</div>
+        <div class="flex gap-6">
+            <span>Confidential</span>
+            <span class="text-slate-900">v1.7.0 Release</span>
+        </div>
+    </footer>
 
     <script>
         function copyLink() {
@@ -369,10 +317,14 @@
             const btn = document.getElementById("copyBtn");
             const originalContent = btn.innerHTML;
 
-            btn.innerHTML = `<span class="tracking-tight">Copied</span>`;
+            btn.innerHTML = `<span class="tracking-tight">복사 완료</span>`;
+            btn.classList.add('bg-green-600', 'text-white');
+            btn.classList.remove('bg-slate-900');
 
             setTimeout(() => {
                 btn.innerHTML = originalContent;
+                btn.classList.remove('bg-green-600');
+                btn.classList.add('bg-slate-900');
             }, 2000);
         }
     </script>
